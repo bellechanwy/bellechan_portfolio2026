@@ -54,11 +54,11 @@
   --color-info-dark: #1d4ed8;
 
   /* Typography
-   * Plain Black is licensed to Clay; Inter at weight 500 with negative
-   * letter-spacing is the documented public substitute.
+   * Headings: Urbanist (rounded, geometric, strong personality at display sizes).
+   * Body:     Open Sans (neutral, highly legible at body sizes).
    */
-  --font-family-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-family-secondary: 'Merriweather', Georgia, serif;
   --font-family-mono: 'Fira Code', monospace;
 
