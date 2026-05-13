@@ -58,6 +58,7 @@
    * Body:     Open Sans (neutral, highly legible at body sizes).
    */
   --font-family-display: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-weight-display: 700;
   --font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-family-secondary: 'Merriweather', Georgia, serif;
   --font-family-mono: 'Fira Code', monospace;

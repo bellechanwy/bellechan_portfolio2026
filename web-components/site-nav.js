@@ -48,10 +48,7 @@ class SiteNav extends HTMLElement {
             <ul class="site-nav__links" role="list">
               <li><a href="/#work" data-link="work" class="site-nav__link${active === 'work' ? ' is-active' : ''}">Work</a></li>
               <li><a href="/#about" data-link="about" class="site-nav__link${active === 'about' ? ' is-active' : ''}">About</a></li>
-              <li><a href="/#process" data-link="process" class="site-nav__link${active === 'process' ? ' is-active' : ''}">Process</a></li>
-              <li><a href="/#contact" data-link="contact" class="site-nav__link${active === 'contact' ? ' is-active' : ''}">Contact</a></li>
             </ul>
-            <a class="btn btn--primary site-nav__cta" href="mailto:hello@bellechan.design">Let's talk</a>
           </div>
         </div>
       </nav>

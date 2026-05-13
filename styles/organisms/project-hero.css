@@ -61,7 +61,7 @@
   font-size: clamp(2.5rem, 5vw, var(--font-size-display-lg));
   line-height: 1.05;
   letter-spacing: var(--tracking-display-lg);
-  font-weight: 500;
+  font-weight: 700;
   color: inherit;
   max-width: 14ch;
 }

@@ -60,7 +60,7 @@
 .site-nav__menu {
   display: flex;
   align-items: center;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .site-nav__links {
