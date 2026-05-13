@@ -1,0 +1,174 @@
+/*
+ * Module: site-nav.css
+ * Type: Organism — layout for <app-site-nav>
+ * Purpose: Cream top navigation. Pinned to top. Collapses to a hamburger
+ *          menu on mobile.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *   - molecules/button.css (.btn .btn--primary)
+ *
+ * Used by: web-components/site-nav.js
+ * Side effects: None
+ */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background-color: var(--bg-page);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(8px);
+}
+
+.site-nav__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.site-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: var(--font-family-display);
+  font-weight: 500;
+}
+
+.site-nav__brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, var(--accent-peach) 0%, var(--accent-coral) 60%, var(--accent-pink) 100%);
+  box-shadow: inset -3px -4px 8px rgba(10, 10, 10, 0.2),
+              inset 3px 4px 8px rgba(255, 255, 255, 0.35);
+}
+
+.site-nav__brand-name {
+  font-size: var(--font-size-title-md);
+  letter-spacing: var(--tracking-title-lg);
+}
+
+.site-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.site-nav__link {
+  font-size: var(--font-size-body-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: var(--space-xs) 0;
+  position: relative;
+}
+
+.site-nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: right var(--transition-base);
+  border-radius: var(--radius-pill);
+}
+
+.site-nav__link:hover { opacity: 1; }
+.site-nav__link:hover::after,
+.site-nav__link.is-active::after {
+  right: 0;
+}
+
+.site-nav__cta {
+  flex-shrink: 0;
+}
+
+.site-nav__toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.site-nav__toggle-bar {
+  width: 18px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 768px) {
+  .site-nav__inner {
+    height: 64px;
+    padding: 0 var(--space-md);
+  }
+
+  .site-nav__toggle {
+    display: inline-flex;
+  }
+
+  .site-nav__menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-md);
+    background-color: var(--bg-page);
+    border-bottom: 1px solid var(--border-soft);
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base), transform var(--transition-base);
+  }
+
+  .site-nav__menu[data-open="true"] {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .site-nav__links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-sm);
+  }
+
+  .site-nav__link {
+    padding: var(--space-sm) 0;
+    font-size: var(--font-size-title-md);
+  }
+
+  .site-nav__link::after { display: none; }
+
+  .site-nav__cta {
+    align-self: stretch;
+    justify-content: center;
+  }
+}

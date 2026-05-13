@@ -1,0 +1,44 @@
+/*
+ * Module: badge.css
+ * Type: Molecule
+ * Purpose: Pill-shaped labels — cream-fill (default), outline, and
+ *          on-color variants. Mirrors badge-pill from DESIGN.md.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *
+ * Used by: hero, project-card, project-hero — any HTML using .badge
+ * Side effects: None
+ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+  padding: var(--space-xxs) var(--space-sm);
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-size: var(--font-size-caption);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.badge--outline {
+  background-color: transparent;
+  border: 1px solid var(--border);
+}
+
+.badge--on-color {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: inherit;
+  backdrop-filter: blur(2px);
+}
+
+.badge--uppercase {
+  text-transform: uppercase;
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  padding: var(--space-xxs) var(--space-sm);
+}

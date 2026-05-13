@@ -1,0 +1,92 @@
+/*
+ * Module: cta-band.css
+ * Type: Organism — layout for <app-cta-band>
+ * Purpose: Pre-footer cream band with closing CTA and clay illustration.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *   - molecules/button.css
+ *   - molecules/clay-art.css
+ *
+ * Used by: web-components/cta-band.js
+ * Side effects: None
+ */
+
+.cta-band {
+  position: relative;
+  max-width: 1280px;
+  margin: var(--space-section) auto 0;
+  padding: 80px;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-xl);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-band__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-band__eyebrow {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cta-band__title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-md);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display-md);
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 16ch;
+}
+
+.cta-band__sub {
+  font-size: var(--font-size-body-md);
+  color: var(--text-secondary);
+  max-width: 52ch;
+}
+
+.cta-band__cta { margin-top: var(--space-sm); }
+
+.cta-band__art {
+  position: relative;
+  min-height: 240px;
+}
+
+.cta-band__art-a { width: 140px; height: 140px; top: 8%;  right: 18%; position: absolute; }
+.cta-band__art-b { width: 96px;  height: 96px;  top: 50%; right: 4%;  position: absolute; }
+.cta-band__art-c { width: 180px; height: 60px;  bottom: 8%; right: 30%; position: absolute; transform: rotate(-12deg); }
+.cta-band__art-d { width: 70px;  height: 70px;  top: 32%; right: 56%; position: absolute; }
+
+@media (max-width: 900px) {
+  .cta-band {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl) var(--space-lg);
+    margin-top: var(--space-xxl);
+    margin-left: var(--space-md);
+    margin-right: var(--space-md);
+  }
+  .cta-band__title {
+    font-size: var(--font-size-display-sm);
+  }
+  .cta-band__art {
+    min-height: 160px;
+  }
+  .cta-band__art-a { width: 100px; height: 100px; right: 30%; }
+  .cta-band__art-b { width: 70px;  height: 70px;  right: 6%; }
+  .cta-band__art-c { width: 140px; height: 48px;  right: 40%; }
+  .cta-band__art-d { width: 56px;  height: 56px;  right: 60%; }
+}

@@ -1,0 +1,152 @@
+/*
+ * Module: project-detail.css
+ * Type: Organism — layout for project case-study body sections.
+ * Purpose: Editorial body for project pages — sectioned with eyebrows,
+ *          two-column blocks, image cards, outcomes grid, and "next
+ *          project" navigation.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *   - molecules/feature-card.css
+ *   - molecules/clay-art.css
+ *
+ * Used by: projects/lumen.html, tiller.html, mosaic.html, pebble.html
+ * Side effects: None
+ */
+
+.project-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--space-md);
+}
+
+.project-section__eyebrow {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.project-section__heading {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-md);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display-md);
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 22ch;
+  margin-bottom: var(--space-lg);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.project-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.project-stat {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.project-stat__value {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-md);
+  line-height: 1;
+  letter-spacing: var(--tracking-display-md);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.project-stat__label {
+  font-size: var(--font-size-body-sm);
+  color: var(--text-secondary);
+}
+
+.project-mockup {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  border: 1px solid var(--border-soft);
+}
+
+.project-mockup__frame {
+  position: relative;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-soft);
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+.project-mockup__caption {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-caption);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.project-next {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.project-next__card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-lg);
+  align-items: center;
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: transform var(--transition-base);
+}
+
+.project-next__card:hover { transform: translateY(-3px); opacity: 1; }
+
+.project-next__eyebrow {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.project-next__title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-sm);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: var(--space-xs);
+}
+
+.project-next__arrow {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .project-grid { grid-template-columns: 1fr; }
+  .project-stat-grid { grid-template-columns: 1fr; }
+  .project-section__heading { font-size: var(--font-size-display-sm); }
+}

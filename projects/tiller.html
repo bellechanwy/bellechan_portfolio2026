@@ -1,0 +1,234 @@
+<!-- No inline or internal CSS styles are allowed. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Tiller — Finance for tiny teams · Belle Chan</title>
+  <meta name="description" content="Case study: redesigning Tiller, a no-jargon finance dashboard for two-person companies. Plain-English taxes, calm cashflow, accountant-friendly exports.">
+  <link rel="canonical" href="https://bellechan.design/projects/tiller.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tiller — Finance for tiny teams">
+  <meta property="og:description" content="Case study: a calm finance dashboard for two-person companies. Belle Chan, UI/UX designer.">
+  <meta property="og:image" content="/images/og/tiller.jpg">
+  <meta property="og:url" content="https://bellechan.design/projects/tiller.html">
+  <meta property="og:type" content="article">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- CSS: reset > Tailwind > fonts > icons > project -->
+  <link rel="stylesheet" href="/styles/reset.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <script src="/tailwind.config.js"></script>
+</head>
+<body class="bg-page text-ink font-base">
+
+  <noscript><p>This site requires JavaScript to function. Please enable JavaScript in your browser.</p></noscript>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <app-site-nav active="work"></app-site-nav>
+  </header>
+
+  <main id="main-content">
+
+    <a href="/#work" class="project-back">← Back to all projects</a>
+
+    <!-- ========== PROJECT HERO ========== -->
+    <section class="project-hero" aria-labelledby="tiller-title">
+      <div class="project-hero__band project-hero--teal">
+        <div class="project-hero__copy">
+          <span class="project-hero__eyebrow">Project 02 · Web · SaaS dashboard</span>
+          <h1 id="tiller-title" class="project-hero__title">Finance for tiny teams.</h1>
+          <p class="project-hero__lede">
+            Tiller is a no-jargon books app for two-person companies. We rebuilt
+            cashflow, expenses and tax filings around a single principle: the
+            person doing this work isn't an accountant.
+          </p>
+        </div>
+        <div class="project-hero__art" aria-hidden="true">
+          <span class="clay-mountain clay-fill-mint     absolute right-[2%]  bottom-[-6%] w-[60%] h-[70%]"></span>
+          <span class="clay-blob     clay-fill-ochre    absolute right-[36%] bottom-[26%] w-[26%] h-[26%]"></span>
+          <span class="clay-pill     clay-fill-cream    absolute right-[8%]  top-[16%]   w-[44%] h-[10%] rotate-[8deg]"></span>
+          <span class="clay-blob     clay-fill-pink     absolute right-[60%] top-[10%]   w-[18%] h-[18%]"></span>
+        </div>
+      </div>
+
+      <dl class="project-meta">
+        <div class="project-meta__item"><dt>Role</dt><dd>Senior Product Designer</dd></div>
+        <div class="project-meta__item"><dt>Team</dt><dd>2 designers, 5 engineers, 1 PM</dd></div>
+        <div class="project-meta__item"><dt>Year</dt><dd>2023 → 2024</dd></div>
+        <div class="project-meta__item"><dt>Scope</dt><dd>UX · UI · Design system</dd></div>
+      </dl>
+    </section>
+
+
+    <!-- ========== PROBLEM ========== -->
+    <section class="project-section" aria-labelledby="tiller-problem">
+      <span class="project-section__eyebrow">The problem</span>
+      <h2 id="tiller-problem" class="project-section__heading">
+        The dashboard had every feature an accountant could want — and scared everyone else.
+      </h2>
+
+      <div class="project-grid">
+        <div class="prose">
+          <p>
+            Tiller's NPS was sitting at <strong>+8</strong>, and support tickets
+            were dominated by one phrase: <em>"I don't know what this number means."</em>
+            Users were a freelance designer, a small bakery owner, a two-person
+            consultancy — none of them spoke balance-sheet.
+          </p>
+          <p>
+            Meanwhile, every screen was optimised for the 5% of users who did:
+            dense tables, accounting acronyms, fourteen filters above the fold.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h3>Constraints</h3>
+          <ul>
+            <li>Cannot remove existing accountant-grade features — pro users rely on them.</li>
+            <li>Must integrate with three existing tax APIs (UK, SG, AU) on day one.</li>
+            <li>One quarter to ship the redesigned core flow.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== APPROACH ========== -->
+    <section class="project-section" aria-labelledby="tiller-approach">
+      <span class="project-section__eyebrow">Approach</span>
+      <h2 id="tiller-approach" class="project-section__heading">
+        Two front doors, one set of data.
+      </h2>
+
+      <div class="project-grid">
+        <div class="prose">
+          <p>
+            We didn't redesign the app — we redesigned the <strong>front door</strong>.
+            Power users got "Ledger view" (everything visible, dense, fast).
+            Everyone else got "Today view" — a single column of plain-English
+            cards that answered the three questions tiny teams actually have.
+          </p>
+        </div>
+
+        <ul class="grid gap-md list-none" role="list">
+          <li class="project-stat">
+            <span class="project-stat__label">Question 01</span>
+            <span class="project-stat__value text-display-sm">Can I pay my bills this month?</span>
+          </li>
+          <li class="project-stat">
+            <span class="project-stat__label">Question 02</span>
+            <span class="project-stat__value text-display-sm">Is this expense a tax thing?</span>
+          </li>
+          <li class="project-stat">
+            <span class="project-stat__label">Question 03</span>
+            <span class="project-stat__value text-display-sm">What do I owe, and to whom?</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ========== DESIGN SYSTEM ========== -->
+    <section class="project-section" aria-labelledby="tiller-system">
+      <span class="project-section__eyebrow">Design system</span>
+      <h2 id="tiller-system" class="project-section__heading">
+        We shipped the redesign and a 200-token system in the same quarter.
+      </h2>
+
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-lg list-none" role="list">
+        <li class="feature-card feature-card--cream">
+          <span class="feature-card__eyebrow">Tokens</span>
+          <h3 class="feature-card__title">Three-tier semantic palette</h3>
+          <p class="feature-card__description">Raw → semantic → component. Lets us flip light/dark and brand without rewriting screens.</p>
+        </li>
+        <li class="feature-card feature-card--cream">
+          <span class="feature-card__eyebrow">Components</span>
+          <h3 class="feature-card__title">38 audited primitives</h3>
+          <p class="feature-card__description">Replaced 142 one-off variants with 38 composable primitives. Engineers loved us for one whole sprint.</p>
+        </li>
+        <li class="feature-card feature-card--cream">
+          <span class="feature-card__eyebrow">Docs</span>
+          <h3 class="feature-card__title">Anatomy + do / don't</h3>
+          <p class="feature-card__description">Every component shipped with a one-page "anatomy + when not to use it" Figma doc. No more PRs to "explain the variant."</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- ========== OUTCOMES ========== -->
+    <section class="project-section" aria-labelledby="tiller-outcomes">
+      <span class="project-section__eyebrow">Outcomes · 5 months post-launch</span>
+      <h2 id="tiller-outcomes" class="project-section__heading">
+        Fewer "what does this mean?" tickets. More renewals.
+      </h2>
+
+      <div class="project-stat-grid">
+        <div class="project-stat">
+          <span class="project-stat__value">+34</span>
+          <span class="project-stat__label">NPS lift among non-accountant accounts.</span>
+        </div>
+        <div class="project-stat">
+          <span class="project-stat__value">−47%</span>
+          <span class="project-stat__label">Reduction in "What does this number mean?" support tickets.</span>
+        </div>
+        <div class="project-stat">
+          <span class="project-stat__value">+22%</span>
+          <span class="project-stat__label">Annual-plan upgrade rate from monthly subscribers.</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== NEXT PROJECT ========== -->
+    <nav class="project-next" aria-label="Project navigation">
+      <a href="/projects/mosaic.html" class="project-next__card">
+        <div>
+          <span class="project-next__eyebrow">Next project · 03</span>
+          <h2 class="project-next__title">Mosaic — music discovery for the slow listener.</h2>
+        </div>
+        <span class="project-next__arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+
+    <!-- ========== CTA ========== -->
+    <app-cta-band
+      heading="Need a calm voice on a noisy product?"
+      sub="I help SaaS teams turn dense tools into kind ones. Embedded engagements, sprint workshops, or audit + roadmap."
+      cta-label="hello@bellechan.design"
+      cta-href="mailto:hello@bellechan.design">
+    </app-cta-band>
+
+  </main>
+
+  <app-site-footer></app-site-footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Tiller — Finance for tiny teams",
+    "creator": { "@type": "Person", "name": "Belle Chan" },
+    "description": "Case study for the Tiller redesign — a no-jargon finance dashboard for two-person teams.",
+    "url": "https://bellechan.design/projects/tiller.html"
+  }
+  </script>
+
+  <script type="module" src="/scripts/main.js" defer></script>
+
+</body>
+</html>

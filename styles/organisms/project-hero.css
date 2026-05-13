@@ -1,0 +1,132 @@
+/*
+ * Module: project-hero.css
+ * Type: Organism — layout for the case-study hero block on project pages.
+ * Purpose: Big rounded saturated band carrying project name, one-liner,
+ *          and the project metadata grid (role, year, client, scope).
+ *          Cycles a brand colour per project (see DESIGN.md "don't repeat
+ *          the same brand-color card twice in a row" — each project owns one).
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *   - molecules/badge.css
+ *   - molecules/clay-art.css
+ *
+ * Used by: projects/lumen.html, tiller.html, mosaic.html, pebble.html
+ * Side effects: None
+ */
+
+.project-hero {
+  position: relative;
+  margin: var(--space-lg) auto 0;
+  max-width: 1280px;
+  padding: 0 var(--space-md);
+}
+
+.project-hero__band {
+  position: relative;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xxl) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-xl);
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 460px;
+}
+
+.project-hero--pink     { background-color: var(--accent-pink);     color: var(--text-inverse); }
+.project-hero--teal     { background-color: var(--accent-teal);     color: var(--text-inverse); }
+.project-hero--lavender { background-color: var(--accent-lavender); color: var(--text-primary); }
+.project-hero--peach    { background-color: var(--accent-peach);    color: var(--text-primary); }
+.project-hero--ochre    { background-color: var(--accent-ochre);    color: var(--text-primary); }
+
+.project-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.project-hero__eyebrow {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.project-hero__title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.5rem, 5vw, var(--font-size-display-lg));
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display-lg);
+  font-weight: 500;
+  color: inherit;
+  max-width: 14ch;
+}
+
+.project-hero__lede {
+  font-size: var(--font-size-title-md);
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.9;
+  max-width: 52ch;
+}
+
+.project-hero__art {
+  position: relative;
+  min-height: 260px;
+}
+
+.project-meta {
+  max-width: 1280px;
+  margin: var(--space-xl) auto 0;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  border-top: 1px solid var(--border-soft);
+  padding-top: var(--space-xl);
+}
+
+.project-meta__item dt {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xxs);
+}
+
+.project-meta__item dd {
+  font-size: var(--font-size-title-md);
+  color: var(--text-primary);
+}
+
+.project-back {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-md) 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-button);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .project-hero__band {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl) var(--space-lg);
+    min-height: auto;
+  }
+  .project-hero__art {
+    min-height: 220px;
+  }
+  .project-meta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}

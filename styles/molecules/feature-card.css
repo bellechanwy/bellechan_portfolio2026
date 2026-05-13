@@ -1,0 +1,118 @@
+/*
+ * Module: feature-card.css
+ * Type: Molecule
+ * Purpose: Saturated single-color feature cards — pink, teal, lavender,
+ *          peach, ochre, cream. Mirrors feature-card-* from DESIGN.md.
+ *          Used as project showcase tiles on the home page and as
+ *          accent surfaces inside project detail pages.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *
+ * Used by: index.html, project pages — any HTML using .feature-card
+ * Side effects: None
+ */
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 360px;
+  transition: transform var(--transition-base);
+}
+
+.feature-card:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.feature-card--pink   { background-color: var(--accent-pink);     color: var(--text-inverse); }
+.feature-card--teal   { background-color: var(--accent-teal);     color: var(--text-inverse); }
+.feature-card--lavender { background-color: var(--accent-lavender); color: var(--text-primary); }
+.feature-card--peach  { background-color: var(--accent-peach);    color: var(--text-primary); }
+.feature-card--ochre  { background-color: var(--accent-ochre);    color: var(--text-primary); }
+.feature-card--cream  { background-color: var(--bg-card);         color: var(--text-primary); }
+
+.feature-card__eyebrow {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.feature-card__title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-sm);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display-sm);
+  font-weight: 500;
+  color: inherit;
+  margin: 0;
+}
+
+.feature-card__description {
+  font-size: var(--font-size-body-md);
+  line-height: 1.55;
+  color: inherit;
+  opacity: 0.9;
+  max-width: 42ch;
+}
+
+.feature-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: auto;
+}
+
+.feature-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-button);
+  font-weight: 600;
+  color: inherit;
+}
+
+.feature-card__cta-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.feature-card:hover .feature-card__cta-arrow {
+  transform: translateX(4px);
+}
+
+.feature-card__art {
+  position: absolute;
+  inset: auto -24px -24px auto;
+  width: 220px;
+  height: 220px;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    min-height: 320px;
+    padding: var(--space-lg);
+  }
+  .feature-card__title {
+    font-size: 1.75rem;
+  }
+  .feature-card__art {
+    width: 160px;
+    height: 160px;
+    inset: auto -16px -16px auto;
+  }
+}

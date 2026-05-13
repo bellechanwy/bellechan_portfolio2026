@@ -1,0 +1,199 @@
+<!-- No inline or internal CSS styles are allowed. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Pebble — A checkout that respects the planet · Belle Chan</title>
+  <meta name="description" content="Case study: redesigning a sustainable-goods marketplace's checkout flow around carbon transparency. +19% conversion, +9% AOV.">
+  <link rel="canonical" href="https://bellechan.design/projects/pebble.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pebble — A checkout that respects the planet">
+  <meta property="og:description" content="Case study: a checkout flow built around carbon transparency. Belle Chan, UI/UX designer.">
+  <meta property="og:image" content="/images/og/pebble.jpg">
+  <meta property="og:url" content="https://bellechan.design/projects/pebble.html">
+  <meta property="og:type" content="article">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- CSS: reset > Tailwind > fonts > icons > project -->
+  <link rel="stylesheet" href="/styles/reset.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <script src="/tailwind.config.js"></script>
+</head>
+<body class="bg-page text-ink font-base">
+
+  <noscript><p>This site requires JavaScript to function. Please enable JavaScript in your browser.</p></noscript>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <app-site-nav active="work"></app-site-nav>
+  </header>
+
+  <main id="main-content">
+
+    <a href="/#work" class="project-back">← Back to all projects</a>
+
+    <!-- ========== PROJECT HERO ========== -->
+    <section class="project-hero" aria-labelledby="pebble-title">
+      <div class="project-hero__band project-hero--peach">
+        <div class="project-hero__copy">
+          <span class="project-hero__eyebrow">Project 04 · E-commerce · Checkout</span>
+          <h1 id="pebble-title" class="project-hero__title">A checkout that respects the planet.</h1>
+          <p class="project-hero__lede">
+            Pebble is a sustainable-goods marketplace. We rebuilt the cart and
+            checkout around carbon transparency — and bumped conversion by 19%
+            without resorting to dark patterns.
+          </p>
+        </div>
+        <div class="project-hero__art" aria-hidden="true">
+          <span class="clay-mountain clay-fill-teal     absolute right-[2%]  bottom-[-4%] w-[55%] h-[55%]"></span>
+          <span class="clay-blob     clay-fill-pink     absolute right-[40%] bottom-[24%] w-[24%] h-[24%]"></span>
+          <span class="clay-blob     clay-fill-cream    absolute right-[14%] top-[12%]   w-[26%] h-[26%]"></span>
+          <span class="clay-blob     clay-fill-ochre    absolute right-[58%] top-[8%]    w-[14%] h-[14%]"></span>
+        </div>
+      </div>
+
+      <dl class="project-meta">
+        <div class="project-meta__item"><dt>Role</dt><dd>Service + Product Designer</dd></div>
+        <div class="project-meta__item"><dt>Team</dt><dd>1 designer, 1 researcher, 3 engineers</dd></div>
+        <div class="project-meta__item"><dt>Year</dt><dd>2022 → 2023</dd></div>
+        <div class="project-meta__item"><dt>Scope</dt><dd>Service · UX · A11y</dd></div>
+      </dl>
+    </section>
+
+
+    <!-- ========== PROBLEM ========== -->
+    <section class="project-section" aria-labelledby="pebble-problem">
+      <span class="project-section__eyebrow">The problem</span>
+      <h2 id="pebble-problem" class="project-section__heading">
+        Shoppers cared about sustainability — until checkout.
+      </h2>
+
+      <div class="project-grid">
+        <div class="prose">
+          <p>
+            Pebble's brand promise was <strong>"every purchase, fully traceable."</strong>
+            But cart abandonment was <strong>74%</strong> and post-purchase NPS
+            cited "I had no idea what I was paying for at the end."
+          </p>
+          <p>
+            The checkout was a Shopify default with a sustainability label
+            painted over it. The carbon impact, the offset costs, the shipping
+            origin — all tucked away inside collapsed accordions.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h3>Constraints</h3>
+          <ul>
+            <li>WCAG 2.2 AA compliance — non-negotiable, audited externally.</li>
+            <li>Must support split shipments from 4 fulfilment regions.</li>
+            <li>Must surface carbon data without making the page heavier.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== APPROACH ========== -->
+    <section class="project-section" aria-labelledby="pebble-approach">
+      <span class="project-section__eyebrow">Approach</span>
+      <h2 id="pebble-approach" class="project-section__heading">
+        We made the carbon cost the <em>first</em> number, not a footnote.
+      </h2>
+
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-lg list-none mt-lg" role="list">
+        <li class="feature-card feature-card--peach">
+          <span class="feature-card__eyebrow">Move 01</span>
+          <h3 class="feature-card__title">Cart-as-receipt</h3>
+          <p class="feature-card__description">Each item shows price, weight, and grams of CO₂e — surfaced on the cart line itself, not three taps deep.</p>
+        </li>
+        <li class="feature-card feature-card--teal">
+          <span class="feature-card__eyebrow">Move 02</span>
+          <h3 class="feature-card__title">Honest shipping</h3>
+          <p class="feature-card__description">A live map showing where your items ship from. "Fastest" is renamed "soonest"; the slow option says how much CO₂ you save.</p>
+        </li>
+        <li class="feature-card feature-card--ochre">
+          <span class="feature-card__eyebrow">Move 03</span>
+          <h3 class="feature-card__title">Frictionless A11y</h3>
+          <p class="feature-card__description">Single-column layout, 44px tap targets, skip-to-pay shortcut, full keyboard parity. WCAG 2.2 AA from day one.</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- ========== OUTCOMES ========== -->
+    <section class="project-section" aria-labelledby="pebble-outcomes">
+      <span class="project-section__eyebrow">Outcomes · 6 months post-launch</span>
+      <h2 id="pebble-outcomes" class="project-section__heading">
+        Conversion went up <em>because</em> we were honest, not in spite of it.
+      </h2>
+
+      <div class="project-stat-grid">
+        <div class="project-stat">
+          <span class="project-stat__value">+19%</span>
+          <span class="project-stat__label">Cart-to-purchase conversion lift, holdout-validated.</span>
+        </div>
+        <div class="project-stat">
+          <span class="project-stat__value">+9%</span>
+          <span class="project-stat__label">Average order value as users grouped shipments.</span>
+        </div>
+        <div class="project-stat">
+          <span class="project-stat__value">100%</span>
+          <span class="project-stat__label">WCAG 2.2 AA pass rate at external audit, no exceptions.</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== NEXT PROJECT ========== -->
+    <nav class="project-next" aria-label="Project navigation">
+      <a href="/projects/lumen.html" class="project-next__card">
+        <div>
+          <span class="project-next__eyebrow">Back to start · 01</span>
+          <h2 class="project-next__title">Lumen — a softer way to fall asleep.</h2>
+        </div>
+        <span class="project-next__arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+
+    <!-- ========== CTA ========== -->
+    <app-cta-band
+      heading="Building something that has to be honest and delightful?"
+      sub="Climate-tech, public services, or any product where trust is the feature. Let's talk."
+      cta-label="hello@bellechan.design"
+      cta-href="mailto:hello@bellechan.design">
+    </app-cta-band>
+
+  </main>
+
+  <app-site-footer></app-site-footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Pebble — A checkout that respects the planet",
+    "creator": { "@type": "Person", "name": "Belle Chan" },
+    "description": "Case study for the Pebble checkout redesign — carbon transparency and accessibility.",
+    "url": "https://bellechan.design/projects/pebble.html"
+  }
+  </script>
+
+  <script type="module" src="/scripts/main.js" defer></script>
+
+</body>
+</html>

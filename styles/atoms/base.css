@@ -1,0 +1,91 @@
+/*
+ * Module: base.css
+ * Type: Atoms — Base Styles
+ * Purpose: Default element behavior beyond reset. Applies the Clay
+ *          cream canvas + ink type defaults across every page.
+ *
+ * Depends on:
+ *   - tokens-semantic.css (semantic token values)
+ *
+ * Used by: main.css
+ * Side effects: None
+ */
+
+html {
+  background-color: var(--bg-page);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-md);
+  line-height: 1.55;
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+img, svg {
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-md);
+  z-index: 9999;
+}
+
+.font-display {
+  font-family: var(--font-family-display);
+  font-weight: 500;
+}

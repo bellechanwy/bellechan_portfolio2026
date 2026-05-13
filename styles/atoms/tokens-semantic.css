@@ -1,0 +1,94 @@
+/*
+ * Module: tokens-semantic.css
+ * Type: Atoms — Semantic Tokens
+ * Purpose: Role-based mappings of raw tokens. This is what molecules
+ *          and organisms consume. Mirrors the Clay-design-analysis spec.
+ *
+ * Depends on:
+ *   - tokens.css (raw palette values)
+ *
+ * Used by: all molecule and organism CSS files
+ * Side effects: None
+ *
+ * RULE: Molecules and organisms reference ONLY these semantic variables, never raw tokens directly.
+ */
+
+/* ========================
+   LAYER 1: GLOBAL
+   ======================== */
+
+:root {
+  /* Text */
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-body);
+  --text-muted: var(--color-muted);
+  --text-muted-soft: var(--color-muted-soft);
+  --text-inverse: var(--color-white);
+  --text-link: var(--color-ink);
+
+  /* Backgrounds — cream canvas is the default page floor */
+  --bg-page: var(--color-canvas);
+  --bg-surface: var(--color-surface-soft);
+  --bg-elevated: var(--color-white);
+  --bg-card: var(--color-surface-card);
+  --bg-card-strong: var(--color-surface-strong);
+  --bg-dark: var(--color-surface-dark);
+
+  /* Borders */
+  --border: var(--color-hairline);
+  --border-soft: var(--color-hairline-soft);
+  --border-strong: var(--color-ink);
+
+  /* Shadows */
+  --shadow: var(--shadow-md);
+}
+
+/* ========================
+   LAYER 2: BRAND
+   light = subtle bg, hover states
+   base  = main brand color, CTAs
+   dark  = text, pressed states
+   ======================== */
+
+:root {
+  /* Primary = near-black (Clay's CTA ink) */
+  --primary-light: var(--color-disabled);
+  --primary-base: var(--color-ink);
+  --primary-dark: var(--color-ink-active);
+
+  /* Secondary = cream surface (used for "on dark" buttons + soft cards) */
+  --secondary-light: var(--color-canvas);
+  --secondary-base: var(--color-surface-card);
+  --secondary-dark: var(--color-surface-strong);
+
+  /* Saturated single-color accents — drive feature cards */
+  --accent-pink: var(--color-brand-pink);
+  --accent-teal: var(--color-brand-teal);
+  --accent-lavender: var(--color-brand-lavender);
+  --accent-peach: var(--color-brand-peach);
+  --accent-ochre: var(--color-brand-ochre);
+  --accent-mint: var(--color-brand-mint);
+  --accent-coral: var(--color-brand-coral);
+}
+
+/* ========================
+   LAYER 3: STATUS
+   ======================== */
+
+:root {
+  --error-light: var(--color-error-light);
+  --error-base: var(--color-error-base);
+  --error-dark: var(--color-error-dark);
+
+  --success-light: var(--color-success-light);
+  --success-base: var(--color-success-base);
+  --success-dark: var(--color-success-dark);
+
+  --warning-light: var(--color-warning-light);
+  --warning-base: var(--color-warning-base);
+  --warning-dark: var(--color-warning-dark);
+
+  --info-light: var(--color-info-light);
+  --info-base: var(--color-info-base);
+  --info-dark: var(--color-info-dark);
+}

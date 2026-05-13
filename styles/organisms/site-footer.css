@@ -1,0 +1,146 @@
+/*
+ * Module: site-footer.css
+ * Type: Organism — layout for <app-site-footer>
+ * Purpose: Cream-tinted footer with closing CTA, sitemap columns, and a
+ *          horizon-style row of clay mountains. Per DESIGN.md, the footer
+ *          is intentionally cream — never dark navy.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *   - molecules/clay-art.css
+ *   - molecules/button.css
+ *
+ * Used by: web-components/site-footer.js
+ * Side effects: None
+ */
+
+.site-footer {
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  margin-top: var(--space-section);
+}
+
+.site-footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px var(--space-lg) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xxl);
+}
+
+.site-footer__lede {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.site-footer__eyebrow {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.site-footer__display {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-md);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display-md);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.site-footer__columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  align-self: start;
+}
+
+.site-footer__col-title {
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-family-base);
+}
+
+.site-footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  list-style: none;
+}
+
+.site-footer__col li,
+.site-footer__col a {
+  font-size: var(--font-size-body-sm);
+  color: var(--text-secondary);
+}
+
+.site-footer__col a:hover { color: var(--text-primary); opacity: 1; }
+
+.site-footer__horizon {
+  position: relative;
+  height: 140px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  overflow: hidden;
+}
+
+.site-footer__mountain {
+  position: absolute;
+  bottom: -20px;
+}
+
+.site-footer__mountain--a { left: 4%;  width: 220px; height: 160px; }
+.site-footer__mountain--b { left: 22%; width: 280px; height: 200px; }
+.site-footer__mountain--c { left: 44%; width: 180px; height: 130px; }
+.site-footer__mountain--d { left: 60%; width: 320px; height: 220px; }
+.site-footer__mountain--e { left: 82%; width: 200px; height: 150px; }
+
+.site-footer__legal {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-lg) var(--space-xl);
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-size: var(--font-size-caption);
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    padding: var(--space-xxl) var(--space-md) var(--space-xl);
+    gap: var(--space-xl);
+  }
+  .site-footer__columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  .site-footer__display {
+    font-size: var(--font-size-display-sm);
+  }
+  .site-footer__horizon {
+    height: 100px;
+    padding: 0 var(--space-md);
+  }
+  .site-footer__mountain--a { width: 140px; height: 100px; }
+  .site-footer__mountain--b { width: 180px; height: 130px; }
+  .site-footer__mountain--c { width: 120px; height: 90px; }
+  .site-footer__mountain--d { width: 200px; height: 140px; }
+  .site-footer__mountain--e { width: 140px; height: 100px; }
+  .site-footer__legal {
+    flex-direction: column;
+    padding: var(--space-md);
+  }
+}

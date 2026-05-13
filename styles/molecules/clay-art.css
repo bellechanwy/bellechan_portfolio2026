@@ -1,0 +1,58 @@
+/*
+ * Module: clay-art.css
+ * Type: Molecule
+ * Purpose: Pure-CSS claymation-flavoured decorative shapes used as
+ *          stand-ins for Clay's commissioned 3D illustrations. They give
+ *          the page the warm, hand-crafted shape language called out in
+ *          DESIGN.md without requiring image assets.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *
+ * Used by: hero, feature-card, project-hero
+ * Side effects: None
+ */
+
+.clay-scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  background-color: var(--bg-card);
+  overflow: hidden;
+}
+
+.clay-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0.5px);
+  box-shadow: inset -8px -12px 24px rgba(10, 10, 10, 0.18),
+              inset 8px 12px 24px rgba(255, 255, 255, 0.35);
+}
+
+.clay-pill {
+  position: absolute;
+  border-radius: var(--radius-pill);
+  box-shadow: inset -6px -8px 18px rgba(10, 10, 10, 0.18),
+              inset 6px 8px 18px rgba(255, 255, 255, 0.3);
+}
+
+.clay-mountain {
+  position: absolute;
+  border-top-left-radius: 50% 70%;
+  border-top-right-radius: 50% 70%;
+  border-bottom-left-radius: 12% 100%;
+  border-bottom-right-radius: 12% 100%;
+  box-shadow: inset -10px -14px 28px rgba(10, 10, 10, 0.22),
+              inset 8px 12px 22px rgba(255, 255, 255, 0.28);
+}
+
+.clay-fill-pink     { background-color: var(--accent-pink); }
+.clay-fill-teal     { background-color: var(--accent-teal); }
+.clay-fill-lavender { background-color: var(--accent-lavender); }
+.clay-fill-peach    { background-color: var(--accent-peach); }
+.clay-fill-ochre    { background-color: var(--accent-ochre); }
+.clay-fill-mint     { background-color: var(--accent-mint); }
+.clay-fill-coral    { background-color: var(--accent-coral); }
+.clay-fill-cream    { background-color: var(--bg-card-strong); }
+.clay-fill-ink      { background-color: var(--text-primary); }
