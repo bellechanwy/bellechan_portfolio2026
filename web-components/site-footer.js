@@ -20,8 +20,8 @@ class SiteFooter extends HTMLElement {
     this.innerHTML = `
       <footer class="site-footer">
         <div class="site-footer__legal">
+          <a href="https://www.linkedin.com/in/bellecwy" target="_blank" rel="noopener" class="site-footer__linkedin">LinkedIn →</a>
           <span>© ${year} Belle Chan. Crafted with care.</span>
-          <span>Designed in Figma · Built in vanilla HTML, CSS, JS.</span>
         </div>
       </footer>
     `;
