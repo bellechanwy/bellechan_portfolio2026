@@ -20,7 +20,6 @@
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <!-- CSS: reset > Tailwind > fonts > icons > project -->
   <link rel="stylesheet" href="/styles/reset.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Open+Sans:wght@400;600&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
   <link rel="stylesheet" href="/styles/main.css">
-
   <script src="/tailwind.config.js"></script>
 </head>
 <body class="bg-page text-ink font-base">
@@ -45,7 +43,7 @@
 
     <a href="/#work" class="project-back">← Back to all projects</a>
 
-    <!-- ========== PROJECT HERO ========== -->
+    <!-- ========== HERO ========== -->
     <section class="project-hero" aria-labelledby="pebble-title">
       <div class="project-hero__band project-hero--peach">
         <div class="project-hero__copy">
@@ -69,39 +67,30 @@
         <div class="project-meta__item"><dt>Role</dt><dd>Service + Product Designer</dd></div>
         <div class="project-meta__item"><dt>Team</dt><dd>1 designer, 1 researcher, 3 engineers</dd></div>
         <div class="project-meta__item"><dt>Year</dt><dd>2022 → 2023</dd></div>
-        <div class="project-meta__item"><dt>Scope</dt><dd>Service · UX · A11y</dd></div>
+        <div class="project-meta__item"><dt>Scope</dt><dd>Service · UX · Accessibility</dd></div>
       </dl>
     </section>
 
 
-    <!-- ========== PROBLEM ========== -->
-    <section class="project-section" aria-labelledby="pebble-problem">
-      <span class="project-section__eyebrow">The problem</span>
-      <h2 id="pebble-problem" class="project-section__heading">
-        Shoppers cared about sustainability — until checkout.
+    <!-- ========== MY ROLE ========== -->
+    <section class="project-section" aria-labelledby="pebble-role">
+      <span class="project-section__eyebrow">My role</span>
+      <h2 id="pebble-role" class="project-section__heading">
+        Solo designer, embedded for six months.
       </h2>
 
       <div class="project-grid">
         <div class="prose">
           <p>
-            Pebble's brand promise was <strong>"every purchase, fully traceable."</strong>
-            But cart abandonment was <strong>74%</strong> and post-purchase NPS
-            cited "I had no idea what I was paying for at the end."
+            I was the only designer on this engagement, working alongside a UX researcher
+            and three engineers. I owned the service design (journey mapping, touchpoint
+            audit), the interaction design for cart and checkout, and the accessibility
+            review against WCAG 2.2 AA.
           </p>
           <p>
-            The checkout was a Shopify default with a sustainability label
-            painted over it. The carbon impact, the offset costs, the shipping
-            origin — all tucked away inside collapsed accordions.
+            I also liaised with the external auditor at the end of the project to address
+            any accessibility findings before launch.
           </p>
-        </div>
-
-        <div class="prose">
-          <h3>Constraints</h3>
-          <ul>
-            <li>WCAG 2.2 AA compliance — non-negotiable, audited externally.</li>
-            <li>Must support split shipments from 4 fulfilment regions.</li>
-            <li>Must surface carbon data without making the page heavier.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -111,72 +100,51 @@
     <section class="project-section" aria-labelledby="pebble-approach">
       <span class="project-section__eyebrow">Approach</span>
       <h2 id="pebble-approach" class="project-section__heading">
-        We made the carbon cost the <em>first</em> number, not a footnote.
+        Make the carbon cost the first number, not a footnote.
       </h2>
 
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-lg list-none mt-lg" role="list">
-        <li class="feature-card feature-card--peach">
-          <span class="feature-card__eyebrow">Move 01</span>
-          <h3 class="feature-card__title">Cart-as-receipt</h3>
-          <p class="feature-card__description">Each item shows price, weight, and grams of CO₂e — surfaced on the cart line itself, not three taps deep.</p>
-        </li>
-        <li class="feature-card feature-card--teal">
-          <span class="feature-card__eyebrow">Move 02</span>
-          <h3 class="feature-card__title">Honest shipping</h3>
-          <p class="feature-card__description">A live map showing where your items ship from. "Fastest" is renamed "soonest"; the slow option says how much CO₂ you save.</p>
-        </li>
-        <li class="feature-card feature-card--ochre">
-          <span class="feature-card__eyebrow">Move 03</span>
-          <h3 class="feature-card__title">Frictionless A11y</h3>
-          <p class="feature-card__description">Single-column layout, 44px tap targets, skip-to-pay shortcut, full keyboard parity. WCAG 2.2 AA from day one.</p>
-        </li>
-      </ul>
-    </section>
-
-
-    <!-- ========== OUTCOMES ========== -->
-    <section class="project-section" aria-labelledby="pebble-outcomes">
-      <span class="project-section__eyebrow">Outcomes · 6 months post-launch</span>
-      <h2 id="pebble-outcomes" class="project-section__heading">
-        Conversion went up <em>because</em> we were honest, not in spite of it.
-      </h2>
-
-      <div class="project-stat-grid">
-        <div class="project-stat">
-          <span class="project-stat__value">+19%</span>
-          <span class="project-stat__label">Cart-to-purchase conversion lift, holdout-validated.</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat__value">+9%</span>
-          <span class="project-stat__label">Average order value as users grouped shipments.</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat__value">100%</span>
-          <span class="project-stat__label">WCAG 2.2 AA pass rate at external audit, no exceptions.</span>
+      <div class="project-grid">
+        <div class="prose">
+          <p>
+            Pebble's brand promise was "every purchase, fully traceable" — but the
+            checkout was a Shopify default with a sustainability badge painted on.
+            The carbon impact, offset cost, and shipping origin were all buried inside
+            collapsed accordions. Shoppers cared about sustainability until they hit
+            the cart — then the interface stopped supporting that value.
+          </p>
+          <p>
+            We moved carbon data <strong>onto the cart line itself</strong> — price,
+            weight, and grams of CO₂e visible without a tap. The shipping selector
+            was renamed: "Fastest" became "Soonest" and the slow option showed
+            exactly how much CO₂ you'd save.
+          </p>
         </div>
       </div>
     </section>
 
 
-    <!-- ========== NEXT PROJECT ========== -->
-    <nav class="project-next" aria-label="Project navigation">
-      <a href="/projects/lumen.html" class="project-next__card">
-        <div>
-          <span class="project-next__eyebrow">Back to start · 01</span>
-          <h2 class="project-next__title">Lumen — a softer way to fall asleep.</h2>
+    <!-- ========== OUTCOME ========== -->
+    <section class="project-section" aria-labelledby="pebble-outcome">
+      <span class="project-section__eyebrow">Outcome · 6 months post-launch</span>
+      <h2 id="pebble-outcome" class="project-section__heading">
+        Conversion went up because we were honest, not in spite of it.
+      </h2>
+
+      <div class="project-stat-grid">
+        <div class="project-stat">
+          <span class="project-stat__label">Cart-to-purchase conversion lift</span>
+          <span class="project-stat__value">+19%</span>
         </div>
-        <span class="project-next__arrow" aria-hidden="true">→</span>
-      </a>
-    </nav>
-
-
-    <!-- ========== CTA ========== -->
-    <app-cta-band
-      heading="Building something that has to be honest and delightful?"
-      sub="Climate-tech, public services, or any product where trust is the feature. Let's talk."
-      cta-label="hello@bellechan.design"
-      cta-href="mailto:hello@bellechan.design">
-    </app-cta-band>
+        <div class="project-stat">
+          <span class="project-stat__label">Average order value increase</span>
+          <span class="project-stat__value">+9%</span>
+        </div>
+        <div class="project-stat">
+          <span class="project-stat__label">WCAG 2.2 AA pass rate</span>
+          <span class="project-stat__value">100%</span>
+        </div>
+      </div>
+    </section>
 
   </main>
 

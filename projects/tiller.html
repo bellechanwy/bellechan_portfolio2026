@@ -20,7 +20,6 @@
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <!-- CSS: reset > Tailwind > fonts > icons > project -->
   <link rel="stylesheet" href="/styles/reset.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Open+Sans:wght@400;600&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
   <link rel="stylesheet" href="/styles/main.css">
-
   <script src="/tailwind.config.js"></script>
 </head>
 <body class="bg-page text-ink font-base">
@@ -45,7 +43,7 @@
 
     <a href="/#work" class="project-back">← Back to all projects</a>
 
-    <!-- ========== PROJECT HERO ========== -->
+    <!-- ========== HERO ========== -->
     <section class="project-hero" aria-labelledby="tiller-title">
       <div class="project-hero__band project-hero--teal">
         <div class="project-hero__copy">
@@ -74,34 +72,25 @@
     </section>
 
 
-    <!-- ========== PROBLEM ========== -->
-    <section class="project-section" aria-labelledby="tiller-problem">
-      <span class="project-section__eyebrow">The problem</span>
-      <h2 id="tiller-problem" class="project-section__heading">
-        The dashboard had every feature an accountant could want — and scared everyone else.
+    <!-- ========== MY ROLE ========== -->
+    <section class="project-section" aria-labelledby="tiller-role">
+      <span class="project-section__eyebrow">My role</span>
+      <h2 id="tiller-role" class="project-section__heading">
+        Redesign lead and design-system owner.
       </h2>
 
       <div class="project-grid">
         <div class="prose">
           <p>
-            Tiller's NPS was sitting at <strong>+8</strong>, and support tickets
-            were dominated by one phrase: <em>"I don't know what this number means."</em>
-            Users were a freelance designer, a small bakery owner, a two-person
-            consultancy — none of them spoke balance-sheet.
+            I joined as the senior designer on a two-person design team and owned the
+            end-to-end redesign of the core dashboard — from initial audit through
+            to handoff. I was also responsible for establishing the design system that
+            underpinned every new screen going forward.
           </p>
           <p>
-            Meanwhile, every screen was optimised for the 5% of users who did:
-            dense tables, accounting acronyms, fourteen filters above the fold.
+            I worked closely with the PM to scope the quarter, ran weekly design crits
+            with engineering, and presented direction to the CEO at each milestone.
           </p>
-        </div>
-
-        <div class="prose">
-          <h3>Constraints</h3>
-          <ul>
-            <li>Cannot remove existing accountant-grade features — pro users rely on them.</li>
-            <li>Must integrate with three existing tax APIs (UK, SG, AU) on day one.</li>
-            <li>One quarter to ship the redesigned core flow.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -117,101 +106,43 @@
       <div class="project-grid">
         <div class="prose">
           <p>
-            We didn't redesign the app — we redesigned the <strong>front door</strong>.
-            Power users got "Ledger view" (everything visible, dense, fast).
-            Everyone else got "Today view" — a single column of plain-English
-            cards that answered the three questions tiny teams actually have.
+            The existing dashboard tried to serve accountants and founders with a single
+            view — dense tables, 14 filters above the fold, accounting acronyms
+            throughout. Support tickets confirmed it: <em>"I don't know what this
+            number means"</em> was the top complaint.
+          </p>
+          <p>
+            Rather than strip features, I introduced two modes. <strong>Today view</strong>
+            answered the three questions tiny-team founders actually ask. <strong>Ledger view</strong>
+            kept everything power users relied on. Same data, different doors.
           </p>
         </div>
-
-        <ul class="grid gap-md list-none" role="list">
-          <li class="project-stat">
-            <span class="project-stat__label">Question 01</span>
-            <span class="project-stat__value text-display-sm">Can I pay my bills this month?</span>
-          </li>
-          <li class="project-stat">
-            <span class="project-stat__label">Question 02</span>
-            <span class="project-stat__value text-display-sm">Is this expense a tax thing?</span>
-          </li>
-          <li class="project-stat">
-            <span class="project-stat__label">Question 03</span>
-            <span class="project-stat__value text-display-sm">What do I owe, and to whom?</span>
-          </li>
-        </ul>
       </div>
     </section>
 
 
-    <!-- ========== DESIGN SYSTEM ========== -->
-    <section class="project-section" aria-labelledby="tiller-system">
-      <span class="project-section__eyebrow">Design system</span>
-      <h2 id="tiller-system" class="project-section__heading">
-        We shipped the redesign and a 200-token system in the same quarter.
-      </h2>
-
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-lg list-none" role="list">
-        <li class="feature-card feature-card--cream">
-          <span class="feature-card__eyebrow">Tokens</span>
-          <h3 class="feature-card__title">Three-tier semantic palette</h3>
-          <p class="feature-card__description">Raw → semantic → component. Lets us flip light/dark and brand without rewriting screens.</p>
-        </li>
-        <li class="feature-card feature-card--cream">
-          <span class="feature-card__eyebrow">Components</span>
-          <h3 class="feature-card__title">38 audited primitives</h3>
-          <p class="feature-card__description">Replaced 142 one-off variants with 38 composable primitives. Engineers loved us for one whole sprint.</p>
-        </li>
-        <li class="feature-card feature-card--cream">
-          <span class="feature-card__eyebrow">Docs</span>
-          <h3 class="feature-card__title">Anatomy + do / don't</h3>
-          <p class="feature-card__description">Every component shipped with a one-page "anatomy + when not to use it" Figma doc. No more PRs to "explain the variant."</p>
-        </li>
-      </ul>
-    </section>
-
-
-    <!-- ========== OUTCOMES ========== -->
-    <section class="project-section" aria-labelledby="tiller-outcomes">
-      <span class="project-section__eyebrow">Outcomes · 5 months post-launch</span>
-      <h2 id="tiller-outcomes" class="project-section__heading">
+    <!-- ========== OUTCOME ========== -->
+    <section class="project-section" aria-labelledby="tiller-outcome">
+      <span class="project-section__eyebrow">Outcome · 5 months post-launch</span>
+      <h2 id="tiller-outcome" class="project-section__heading">
         Fewer "what does this mean?" tickets. More renewals.
       </h2>
 
       <div class="project-stat-grid">
         <div class="project-stat">
+          <span class="project-stat__label">NPS lift, non-accountant accounts</span>
           <span class="project-stat__value">+34</span>
-          <span class="project-stat__label">NPS lift among non-accountant accounts.</span>
         </div>
         <div class="project-stat">
+          <span class="project-stat__label">Reduction in "what does this mean?" tickets</span>
           <span class="project-stat__value">−47%</span>
-          <span class="project-stat__label">Reduction in "What does this number mean?" support tickets.</span>
         </div>
         <div class="project-stat">
+          <span class="project-stat__label">Annual-plan upgrade rate</span>
           <span class="project-stat__value">+22%</span>
-          <span class="project-stat__label">Annual-plan upgrade rate from monthly subscribers.</span>
         </div>
       </div>
     </section>
-
-
-    <!-- ========== NEXT PROJECT ========== -->
-    <nav class="project-next" aria-label="Project navigation">
-      <a href="/projects/mosaic.html" class="project-next__card">
-        <div>
-          <span class="project-next__eyebrow">Next project · 03</span>
-          <h2 class="project-next__title">Mosaic — music discovery for the slow listener.</h2>
-        </div>
-        <span class="project-next__arrow" aria-hidden="true">→</span>
-      </a>
-    </nav>
-
-
-    <!-- ========== CTA ========== -->
-    <app-cta-band
-      heading="Need a calm voice on a noisy product?"
-      sub="I help SaaS teams turn dense tools into kind ones. Embedded engagements, sprint workshops, or audit + roadmap."
-      cta-label="hello@bellechan.design"
-      cta-href="mailto:hello@bellechan.design">
-    </app-cta-band>
 
   </main>
 

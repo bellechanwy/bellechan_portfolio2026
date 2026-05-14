@@ -20,7 +20,6 @@
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <!-- CSS: reset > Tailwind > fonts > icons > project -->
   <link rel="stylesheet" href="/styles/reset.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Open+Sans:wght@400;600&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
   <link rel="stylesheet" href="/styles/main.css">
-
   <script src="/tailwind.config.js"></script>
 </head>
 <body class="bg-page text-ink font-base">
@@ -45,7 +43,7 @@
 
     <a href="/#work" class="project-back">← Back to all projects</a>
 
-    <!-- ========== PROJECT HERO ========== -->
+    <!-- ========== HERO ========== -->
     <section class="project-hero" aria-labelledby="lumen-title">
       <div class="project-hero__band project-hero--pink">
         <div class="project-hero__copy">
@@ -73,144 +71,76 @@
     </section>
 
 
-    <!-- ========== OVERVIEW ========== -->
-    <section class="project-section" aria-labelledby="lumen-overview">
-      <span class="project-section__eyebrow">Overview</span>
-      <h2 id="lumen-overview" class="project-section__heading">
-        The brief was simple. The behaviour change wasn't.
+    <!-- ========== MY ROLE ========== -->
+    <section class="project-section" aria-labelledby="lumen-role">
+      <span class="project-section__eyebrow">My role</span>
+      <h2 id="lumen-role" class="project-section__heading">
+        End-to-end design — from brief to build.
       </h2>
 
       <div class="project-grid">
         <div class="prose">
           <p>
-            Lumen launched as a meditation app, but the data told a different
-            story: <strong>72% of nightly sessions were started after 11pm</strong>,
-            and most users dropped off the moment a session ended — straight back
-            into TikTok.
+            I was the sole designer on Lumen, embedded with a two-person engineering team.
+            I led every design phase: stakeholder alignment, user research, information
+            architecture, visual design, and handoff — from kickoff to App Store submission.
           </p>
           <p>
-            We rebriefed the product around a sharper problem: help people
-            <strong>actually put their phone down</strong>. Not "use the app more"
-            — use it less, but at the right moment.
+            I also set up the component library in Figma and wrote the design documentation
+            that the engineers used to build without back-and-forth.
           </p>
-        </div>
-
-        <div class="prose">
-          <h3>Goals</h3>
-          <ul>
-            <li>Reduce average pre-sleep screen time by 25%.</li>
-            <li>Make the app feel inviting at night without being clinical.</li>
-            <li>Build a sleep journal that reads like a friend, not a lab report.</li>
-          </ul>
         </div>
       </div>
     </section>
 
 
-    <!-- ========== RESEARCH ========== -->
-    <section class="project-section" aria-labelledby="lumen-research">
-      <span class="project-section__eyebrow">Research</span>
-      <h2 id="lumen-research" class="project-section__heading">
-        18 sleep-deprived strangers told us what was actually broken.
-      </h2>
-
-      <div class="project-grid">
-        <div class="prose">
-          <p>
-            We ran <strong>18 contextual interviews</strong> in people's bedrooms —
-            phones in hand, lights low. We mapped the last 30 minutes before sleep
-            for each participant and tagged every "phone reach."
-          </p>
-          <p>
-            Three patterns emerged:
-          </p>
-          <ul>
-            <li><strong>The handoff.</strong> Most people closed a meditation, then immediately opened a social app. The bridge between "winding down" and "asleep" was missing.</li>
-            <li><strong>The shame loop.</strong> Tracking apps that scolded users for poor sleep made the next night worse, not better.</li>
-            <li><strong>The audio detour.</strong> People liked sounds, but disliked picking from menus at night. They wanted something close to "press play and dim everything."</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg overflow-hidden bg-card aspect-[4/5] relative">
-          <span class="clay-blob clay-fill-pink     absolute left-[12%]  top-[10%]    w-[55%] h-[55%]"></span>
-          <span class="clay-blob clay-fill-lavender absolute right-[12%] top-[36%]    w-[35%] h-[35%]"></span>
-          <span class="clay-pill clay-fill-teal     absolute left-[18%]  bottom-[14%] w-[50%] h-[12%] rotate-[6deg]"></span>
-          <span class="clay-blob clay-fill-ochre    absolute left-[8%]   bottom-[30%] w-[14%] h-[14%]"></span>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== SOLUTION ========== -->
-    <section class="project-section" aria-labelledby="lumen-solution">
-      <span class="project-section__eyebrow">Solution</span>
-      <h2 id="lumen-solution" class="project-section__heading">
+    <!-- ========== APPROACH ========== -->
+    <section class="project-section" aria-labelledby="lumen-approach">
+      <span class="project-section__eyebrow">Approach</span>
+      <h2 id="lumen-approach" class="project-section__heading">
         One tap, three quiet rooms, no menu fatigue.
       </h2>
 
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-lg list-none mt-lg" role="list">
-        <li class="feature-card feature-card--pink">
-          <span class="feature-card__eyebrow">Feature 01</span>
-          <h3 class="feature-card__title">Wind-down ritual</h3>
-          <p class="feature-card__description">A 6-minute guided sequence — breathing, light dimming, a written intention. The same shape every night, by design.</p>
-        </li>
-        <li class="feature-card feature-card--lavender">
-          <span class="feature-card__eyebrow">Feature 02</span>
-          <h3 class="feature-card__title">Soft sound rooms</h3>
-          <p class="feature-card__description">Three pre-mixed sound rooms (Rain, Cabin, Library). No menu. Big tappable cards that invite sleepy fingers.</p>
-        </li>
-        <li class="feature-card feature-card--ochre">
-          <span class="feature-card__eyebrow">Feature 03</span>
-          <h3 class="feature-card__title">Kind journal</h3>
-          <p class="feature-card__description">Three sliders, one prompt. We ditched the data-dense graphs and replaced them with weekly "letters to yourself."</p>
-        </li>
-      </ul>
+      <div class="project-grid">
+        <div class="prose">
+          <p>
+            Research surfaced a consistent pattern: people who used meditation apps still
+            reached for social media the moment the session ended. The design problem
+            wasn't onboarding or content — it was <strong>the gap between "session over"
+            and "phone face-down."</strong>
+          </p>
+          <p>
+            The approach was to remove choice at night. Instead of a feature menu,
+            Lumen presents a single gentle nudge — a 6-minute wind-down ritual that
+            ends with the screen dimmed and audio fading out. No next step to tap.
+          </p>
+        </div>
+      </div>
     </section>
 
 
-    <!-- ========== OUTCOMES ========== -->
-    <section class="project-section" aria-labelledby="lumen-outcomes">
-      <span class="project-section__eyebrow">Outcomes · 6 months post-launch</span>
-      <h2 id="lumen-outcomes" class="project-section__heading">
+    <!-- ========== OUTCOME ========== -->
+    <section class="project-section" aria-labelledby="lumen-outcome">
+      <span class="project-section__eyebrow">Outcome · 6 months post-launch</span>
+      <h2 id="lumen-outcome" class="project-section__heading">
         Less time in the app. More time asleep.
       </h2>
 
       <div class="project-stat-grid">
         <div class="project-stat">
+          <span class="project-stat__label">Average pre-sleep phone time</span>
           <span class="project-stat__value">−31%</span>
-          <span class="project-stat__label">Average pre-sleep phone time among active users.</span>
         </div>
         <div class="project-stat">
+          <span class="project-stat__label">NPS lift over previous version</span>
           <span class="project-stat__value">+44</span>
-          <span class="project-stat__label">NPS lift over the previous version of the app.</span>
         </div>
         <div class="project-stat">
+          <span class="project-stat__label">App Store rating after relaunch</span>
           <span class="project-stat__value">4.8★</span>
-          <span class="project-stat__label">App Store rating after relaunch (up from 3.6).</span>
         </div>
       </div>
     </section>
-
-
-    <!-- ========== NEXT PROJECT ========== -->
-    <nav class="project-next" aria-label="Project navigation">
-      <a href="/projects/tiller.html" class="project-next__card">
-        <div>
-          <span class="project-next__eyebrow">Next project · 02</span>
-          <h2 class="project-next__title">Tiller — finance for tiny teams.</h2>
-        </div>
-        <span class="project-next__arrow" aria-hidden="true">→</span>
-      </a>
-    </nav>
-
-
-    <!-- ========== CTA ========== -->
-    <app-cta-band
-      heading="Like the way I think? Let's talk."
-      sub="I'm currently booking July → September engagements. Two-week sprints, full quarter retainers, or a single workshop."
-      cta-label="hello@bellechan.design"
-      cta-href="mailto:hello@bellechan.design">
-    </app-cta-band>
 
   </main>
 

@@ -17,7 +17,7 @@
 .project-section {
   max-width: 1280px;
   margin: 0 auto;
-  padding: var(--space-xxl) var(--space-md);
+  padding: var(--space-xxl) var(--space-lg);
 }
 
 .project-section__eyebrow {
@@ -37,15 +37,19 @@
   letter-spacing: var(--tracking-display-md);
   font-weight: 700;
   color: var(--text-primary);
-  max-width: 22ch;
   margin-bottom: var(--space-lg);
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
   align-items: start;
+}
+
+.project-grid .prose,
+.project-section > .prose {
+  max-width: 100%;
 }
 
 .project-stat-grid {
@@ -53,12 +57,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   margin-top: var(--space-lg);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .project-stat {
-  background-color: var(--bg-card);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
@@ -66,16 +71,19 @@
 
 .project-stat__value {
   font-family: var(--font-family-display);
-  font-size: var(--font-size-display-md);
-  line-height: 1;
-  letter-spacing: var(--tracking-display-md);
+  font-size: var(--font-size-display-sm);
+  line-height: 1.15;
+  letter-spacing: var(--tracking-display-sm);
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .project-stat__label {
-  font-size: var(--font-size-body-sm);
-  color: var(--text-secondary);
+  font-size: var(--font-size-caption-uppercase);
+  font-weight: 600;
+  letter-spacing: var(--tracking-uppercase);
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .project-mockup {

@@ -20,7 +20,6 @@
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <!-- CSS: reset > Tailwind > fonts > icons > project -->
   <link rel="stylesheet" href="/styles/reset.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Open+Sans:wght@400;600&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
   <link rel="stylesheet" href="/styles/main.css">
-
   <script src="/tailwind.config.js"></script>
 </head>
 <body class="bg-page text-ink font-base">
@@ -45,7 +43,7 @@
 
     <a href="/#work" class="project-back">← Back to all projects</a>
 
-    <!-- ========== PROJECT HERO ========== -->
+    <!-- ========== HERO ========== -->
     <section class="project-hero" aria-labelledby="mosaic-title">
       <div class="project-hero__band project-hero--lavender">
         <div class="project-hero__copy">
@@ -66,7 +64,7 @@
       </div>
 
       <dl class="project-meta">
-        <div class="project-meta__item"><dt>Role</dt><dd>UX strategy + Visual design</dd></div>
+        <div class="project-meta__item"><dt>Role</dt><dd>UX Strategy + Visual Design</dd></div>
         <div class="project-meta__item"><dt>Team</dt><dd>3 designers, 1 motion, 4 engineers</dd></div>
         <div class="project-meta__item"><dt>Year</dt><dd>2023</dd></div>
         <div class="project-meta__item"><dt>Scope</dt><dd>Strategy · UI · Motion</dd></div>
@@ -74,33 +72,26 @@
     </section>
 
 
-    <!-- ========== PROBLEM ========== -->
-    <section class="project-section" aria-labelledby="mosaic-problem">
-      <span class="project-section__eyebrow">The problem</span>
-      <h2 id="mosaic-problem" class="project-section__heading">
-        The discovery feed had become a candy aisle.
+    <!-- ========== MY ROLE ========== -->
+    <section class="project-section" aria-labelledby="mosaic-role">
+      <span class="project-section__eyebrow">My role</span>
+      <h2 id="mosaic-role" class="project-section__heading">
+        UX strategy and visual design lead.
       </h2>
 
       <div class="project-grid">
         <div class="prose">
           <p>
-            Engagement was up, but a deeper look at the data was unkind:
-            <strong>average track listen time was down 19%</strong>, save rates
-            were flat, and qualitative interviews kept surfacing the same
-            sentence — <em>"I don't know what to listen to."</em>
+            I led UX strategy and visual design within a three-person design team.
+            My focus was on the new discovery model — defining the information
+            architecture, the editorial concept, and the visual language for the
+            mixtape rooms.
           </p>
           <p>
-            The discovery surface had become a wall of 80+ rails — moods,
-            charts, made-for-you, podcasts. We were optimising for "another
-            tap" instead of "a moment of taste."
+            I collaborated with the motion designer on the entrance animations and
+            worked directly with engineering during the React component build to
+            ensure the transitions matched the spec.
           </p>
-        </div>
-
-        <div class="rounded-lg overflow-hidden bg-card aspect-[4/5] relative">
-          <span class="clay-blob clay-fill-lavender absolute left-[10%]  top-[8%]    w-[55%] h-[55%]"></span>
-          <span class="clay-blob clay-fill-pink     absolute right-[10%] top-[34%]   w-[35%] h-[35%]"></span>
-          <span class="clay-pill clay-fill-teal     absolute left-[20%]  bottom-[12%] w-[50%] h-[14%] rotate-[6deg]"></span>
-          <span class="clay-blob clay-fill-ochre    absolute left-[6%]   bottom-[28%] w-[14%] h-[14%]"></span>
         </div>
       </div>
     </section>
@@ -113,69 +104,45 @@
         Fewer choices. More taste.
       </h2>
 
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-lg list-none mt-lg" role="list">
-        <li class="feature-card feature-card--lavender">
-          <span class="feature-card__eyebrow">Move 01</span>
-          <h3 class="feature-card__title">From rails to rooms</h3>
-          <p class="feature-card__description">Replaced 80+ algorithmic rails with three weekly "rooms": Late, Loud, Lush. Curated by a small in-house editorial team.</p>
-        </li>
-        <li class="feature-card feature-card--ochre">
-          <span class="feature-card__eyebrow">Move 02</span>
-          <h3 class="feature-card__title">Slow motion</h3>
-          <p class="feature-card__description">A six-frame intro animation per room. Not a loading state — an invitation to slow down before pressing play.</p>
-        </li>
-        <li class="feature-card feature-card--pink">
-          <span class="feature-card__eyebrow">Move 03</span>
-          <h3 class="feature-card__title">Mixtape, not playlist</h3>
-          <p class="feature-card__description">Each mixtape has a hand-written editor's note. Not metadata — a paragraph of taste.</p>
-        </li>
-      </ul>
-    </section>
-
-
-    <!-- ========== OUTCOMES ========== -->
-    <section class="project-section" aria-labelledby="mosaic-outcomes">
-      <span class="project-section__eyebrow">Outcomes · 90 days post-launch</span>
-      <h2 id="mosaic-outcomes" class="project-section__heading">
-        We optimised for taste — and the metrics caught up.
-      </h2>
-
-      <div class="project-stat-grid">
-        <div class="project-stat">
-          <span class="project-stat__value">+28%</span>
-          <span class="project-stat__label">Average session length on Discover.</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat__value">+12%</span>
-          <span class="project-stat__label">Save-to-library rate per session.</span>
-        </div>
-        <div class="project-stat">
-          <span class="project-stat__value">−18%</span>
-          <span class="project-stat__label">Skip rate inside curated mixtape rooms.</span>
+      <div class="project-grid">
+        <div class="prose">
+          <p>
+            The discovery feed had accumulated 80+ algorithmic rails — moods, charts,
+            made-for-you, podcasts — each competing for the same space. Qualitative
+            research kept surfacing the same line: <em>"I don't know what to listen to."</em>
+          </p>
+          <p>
+            We replaced the wall of rails with <strong>three named rooms</strong> —
+            Late, Loud, Lush — curated weekly by an in-house editorial team and introduced
+            with a hand-written editor's note. The reduction in choice was the feature.
+          </p>
         </div>
       </div>
     </section>
 
 
-    <!-- ========== NEXT PROJECT ========== -->
-    <nav class="project-next" aria-label="Project navigation">
-      <a href="/projects/pebble.html" class="project-next__card">
-        <div>
-          <span class="project-next__eyebrow">Next project · 04</span>
-          <h2 class="project-next__title">Pebble — a checkout that respects the planet.</h2>
+    <!-- ========== OUTCOME ========== -->
+    <section class="project-section" aria-labelledby="mosaic-outcome">
+      <span class="project-section__eyebrow">Outcome · 90 days post-launch</span>
+      <h2 id="mosaic-outcome" class="project-section__heading">
+        We optimised for taste — and the metrics caught up.
+      </h2>
+
+      <div class="project-stat-grid">
+        <div class="project-stat">
+          <span class="project-stat__label">Average session length on Discover</span>
+          <span class="project-stat__value">+28%</span>
         </div>
-        <span class="project-next__arrow" aria-hidden="true">→</span>
-      </a>
-    </nav>
-
-
-    <!-- ========== CTA ========== -->
-    <app-cta-band
-      heading="Have an over-grown product? I can help you prune."
-      sub="Editorial UX for consumer products. I'll help you cut the rails, sharpen the voice, and make the next 18 months feel quieter."
-      cta-label="hello@bellechan.design"
-      cta-href="mailto:hello@bellechan.design">
-    </app-cta-band>
+        <div class="project-stat">
+          <span class="project-stat__label">Save-to-library rate per session</span>
+          <span class="project-stat__value">+12%</span>
+        </div>
+        <div class="project-stat">
+          <span class="project-stat__label">Skip rate in curated mixtape rooms</span>
+          <span class="project-stat__value">−18%</span>
+        </div>
+      </div>
+    </section>
 
   </main>
 

@@ -19,7 +19,7 @@
   position: relative;
   margin: var(--space-lg) auto 0;
   max-width: 1280px;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-lg);
 }
 
 .project-hero__band {
@@ -82,12 +82,12 @@
 .project-meta {
   max-width: 1280px;
   margin: var(--space-xl) auto 0;
-  padding: 0 var(--space-md);
+  padding: var(--space-xl) 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
   border-top: 1px solid var(--border-soft);
-  padding-top: var(--space-xl);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .project-meta__item dt {
@@ -105,12 +105,10 @@
 }
 
 .project-back {
+  display: block;
   max-width: 1280px;
   margin: 0 auto;
-  padding: var(--space-md) var(--space-md) 0;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-lg) 0;
   font-size: var(--font-size-button);
   font-weight: 600;
   color: var(--text-primary);
