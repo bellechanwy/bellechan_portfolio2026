@@ -4,13 +4,17 @@
  * <app-site-nav>
  *
  * Cream top navigation. Pinned to the top of every page. Carries the
- * wordmark on the left, primary nav links centre, and a dark "Let's talk"
- * CTA on the right. Mobile collapses to a hamburger that toggles a
- * full-width drawer.
+ * wordmark on the left and two nav links (About, Work) on the right.
+ * Mobile collapses to a hamburger drawer.
+ *
+ * Active link is determined automatically via IntersectionObserver on
+ * sections that have a matching data-link id (#about, #work). No static
+ * `active` attribute is needed on the homepage — the observer handles it.
+ * On project pages set `active="work"` to pin the Work link.
  *
  * Attributes:
- *   - active (string): "home" | "work" | "about" | "contact" — applies
- *                      the underlined treatment to the matching link.
+ *   - active (string): "about" | "work" — pins an active link statically
+ *                      (used on pages without observed sections).
  *
  * Events dispatched:
  *   - app:nav-toggle (detail: { open: boolean })
@@ -24,7 +28,8 @@ class SiteNav extends HTMLElement {
   }
 
   connectedCallback() {
-    const active = this.getAttribute('active') || '';
+    const pinned = this.getAttribute('active') || '';
+
     this.innerHTML = `
       <nav class="site-nav" aria-label="Main navigation">
         <div class="site-nav__inner">
@@ -46,8 +51,8 @@ class SiteNav extends HTMLElement {
 
           <div class="site-nav__menu" id="site-nav-menu" data-open="false">
             <ul class="site-nav__links" role="list">
-              <li><a href="/#work" data-link="work" class="site-nav__link${active === 'work' ? ' is-active' : ''}">Work</a></li>
-              <li><a href="/#about" data-link="about" class="site-nav__link${active === 'about' ? ' is-active' : ''}">About</a></li>
+              <li><a href="/" data-link="about" class="site-nav__link">About</a></li>
+              <li><a href="/#work" data-link="work" class="site-nav__link">Work</a></li>
             </ul>
           </div>
         </div>
@@ -76,6 +81,62 @@ class SiteNav extends HTMLElement {
 
     toggle.addEventListener('click', this._onToggle);
     menu.addEventListener('click', this._onLinkClick);
+
+    if (pinned) {
+      this._setActive(pinned);
+      return;
+    }
+
+    this._initObserver();
+  }
+
+  _setActive(key) {
+    this.querySelectorAll('.site-nav__link').forEach((link) => {
+      link.classList.toggle('is-active', link.dataset.link === key);
+    });
+  }
+
+  _initObserver() {
+    // Map section ids → nav link keys. Sections must have matching ids in the page.
+    const sectionMap = { about: 'about', work: 'work' };
+    const navHeight = 72;
+
+    // Track which sections are currently intersecting; highlight the topmost one.
+    const visible = new Set();
+
+    const pick = () => {
+      const order = Object.keys(sectionMap);
+      const current = order.find((id) => visible.has(id)) || null;
+      this._setActive(current ? sectionMap[current] : 'about');
+    };
+
+    this._observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          if (entry.isIntersecting) {
+            visible.add(id);
+          } else {
+            visible.delete(id);
+          }
+        });
+        pick();
+      },
+      {
+        // Shrink the top of the viewport by the nav height so the nav
+        // bar itself doesn't count as part of the visible area.
+        rootMargin: `-${navHeight}px 0px 0px 0px`,
+        threshold: 0.1
+      }
+    );
+
+    Object.keys(sectionMap).forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) this._observer.observe(el);
+    });
+
+    // Default to "about" on load before any scroll
+    this._setActive('about');
   }
 
   disconnectedCallback() {
@@ -83,16 +144,12 @@ class SiteNav extends HTMLElement {
     const menu = this.querySelector('.site-nav__menu');
     if (toggle && this._onToggle) toggle.removeEventListener('click', this._onToggle);
     if (menu && this._onLinkClick) menu.removeEventListener('click', this._onLinkClick);
+    if (this._observer) this._observer.disconnect();
   }
 
   attributeChangedCallback(name, oldVal, newVal) {
-    if (oldVal === newVal) return;
-    if (name === 'active') {
-      this.querySelectorAll('.site-nav__link').forEach((link) => {
-        const matches = link.dataset.link === newVal;
-        link.classList.toggle('is-active', matches);
-      });
-    }
+    if (oldVal === newVal || !this.isConnected) return;
+    if (name === 'active') this._setActive(newVal);
   }
 }
 
