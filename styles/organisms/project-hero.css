@@ -9,9 +9,8 @@
  * Depends on:
  *   - tokens-semantic.css
  *   - molecules/badge.css
- *   - molecules/clay-art.css
  *
- * Used by: projects/lumen.html, tiller.html, mosaic.html, pebble.html
+ * Used by: projects/carbon-trading.html, records-management.html, timesheet.html
  * Side effects: None
  */
 
@@ -26,12 +25,12 @@
   position: relative;
   border-radius: var(--radius-xl);
   padding: var(--space-xxl) var(--space-xl);
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   isolation: isolate;
-  min-height: 460px;
+  min-height: 360px;
 }
 
 .project-hero--pink     { background-color: var(--accent-pink);     color: var(--text-inverse); }
@@ -63,7 +62,6 @@
   letter-spacing: var(--tracking-display-lg);
   font-weight: 700;
   color: inherit;
-  max-width: 14ch;
 }
 
 .project-hero__lede {
@@ -71,12 +69,6 @@
   line-height: 1.5;
   color: inherit;
   opacity: 0.9;
-  max-width: 52ch;
-}
-
-.project-hero__art {
-  position: relative;
-  min-height: 260px;
 }
 
 .project-meta {
@@ -116,12 +108,8 @@
 
 @media (max-width: 900px) {
   .project-hero__band {
-    grid-template-columns: 1fr;
     padding: var(--space-xl) var(--space-lg);
     min-height: auto;
-  }
-  .project-hero__art {
-    min-height: 220px;
   }
   .project-meta {
     grid-template-columns: repeat(2, 1fr);

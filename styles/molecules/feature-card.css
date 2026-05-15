@@ -65,7 +65,6 @@
   line-height: 1.55;
   color: inherit;
   opacity: 0.9;
-  max-width: 42ch;
 }
 
 .feature-card__meta {
@@ -94,15 +93,6 @@
   transform: translateX(4px);
 }
 
-.feature-card__art {
-  position: absolute;
-  inset: auto -24px -24px auto;
-  width: 220px;
-  height: 220px;
-  pointer-events: none;
-  opacity: 0.95;
-}
-
 @media (max-width: 768px) {
   .feature-card {
     min-height: 320px;
@@ -110,10 +100,5 @@
   }
   .feature-card__title {
     font-size: 1.75rem;
-  }
-  .feature-card__art {
-    width: 160px;
-    height: 160px;
-    inset: auto -16px -16px auto;
   }
 }
