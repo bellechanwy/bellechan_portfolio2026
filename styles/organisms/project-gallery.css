@@ -1,0 +1,69 @@
+/*
+ * Module: project-gallery.css
+ * Type: Organism — image gallery for project case-study pages.
+ * Purpose: Closing visual section that displays a small row of project
+ *          screenshots / artefacts. Each item is a button that opens
+ *          the image in <app-image-lightbox> at full size.
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *   - organisms/image-lightbox.css (lightbox UI)
+ *
+ * Used by: projects/carbon-trading.html
+ * Side effects: None
+ */
+
+.project-gallery {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--space-lg);
+}
+
+.project-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.project-gallery__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--bg-card);
+  aspect-ratio: 4 / 3;
+  cursor: zoom-in;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.project-gallery__item:hover,
+.project-gallery__item:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-gallery__item:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+.project-gallery__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .project-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .project-gallery__grid { grid-template-columns: 1fr; }
+}

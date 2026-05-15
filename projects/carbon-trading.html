@@ -119,30 +119,51 @@
     </section>
 
 
-    <!-- ========== OUTCOME ========== -->
-    <section class="project-section" aria-labelledby="carbon-trading-outcome">
-      <span class="project-section__eyebrow">Outcome</span>
-      <h2 id="carbon-trading-outcome" class="project-section__heading">
-        A future-state vision for trusted carbon, at national scale.
-      </h2>
-
-      <div class="project-grid">
-        <div class="prose">
-          <p>
-            The work delivered a coherent design direction for how sovereign carbon assets could be created,
-            monitored, and understood — translating complex geospatial and climate systems into something
-            governments, industries, and ecosystem stakeholders could navigate, trust, and act on.
-          </p>
-          <p>
-            Future-facing concepts around emissions intelligence, digital twins, and real-time environmental
-            monitoring were shaped into a clear, governed experience — balancing technical ambition with the
-            clarity, governance, and usability needed for adoption at national scale.
-          </p>
-        </div>
-      </div>
+    <!-- ========== GALLERY ==========
+         Source files live in: public/images/projects/carbon-trading/
+           carbon-trading1.png  →  slot 1 (left-most)
+           carbon-trading2.png  →  slot 2
+           carbon-trading3.png  →  slot 3
+           carbon-trading4.png  →  slot 4 (right-most)
+         Each tile is a button — clicking it opens the image full-size
+         in <app-image-lightbox>. Refine the alt text below to describe
+         what each image actually shows. -->
+    <section class="project-gallery" aria-label="Carbon Trading visuals">
+      <ul class="project-gallery__grid" role="list">
+        <li>
+          <button type="button" class="project-gallery__item"
+                  data-lightbox-src="/images/projects/carbon-trading/carbon-trading1.png"
+                  data-lightbox-alt="Carbon Trading platform — interface concept exploring how sovereign carbon assets are surfaced and made traceable.">
+            <img src="/images/projects/carbon-trading/carbon-trading1.png" alt="Carbon Trading platform — interface concept exploring how sovereign carbon assets are surfaced and made traceable." class="project-gallery__img" loading="lazy">
+          </button>
+        </li>
+        <li>
+          <button type="button" class="project-gallery__item"
+                  data-lightbox-src="/images/projects/carbon-trading/carbon-trading2.png"
+                  data-lightbox-alt="Carbon Trading platform — geospatial intelligence view mapping ecosystems and emissions data.">
+            <img src="/images/projects/carbon-trading/carbon-trading2.png" alt="Carbon Trading platform — geospatial intelligence view mapping ecosystems and emissions data." class="project-gallery__img" loading="lazy">
+          </button>
+        </li>
+        <li>
+          <button type="button" class="project-gallery__item"
+                  data-lightbox-src="/images/projects/carbon-trading/carbon-trading3.png"
+                  data-lightbox-alt="Carbon Trading platform — emissions monitoring and digital twin concept for real-time environmental data.">
+            <img src="/images/projects/carbon-trading/carbon-trading3.png" alt="Carbon Trading platform — emissions monitoring and digital twin concept for real-time environmental data." class="project-gallery__img" loading="lazy">
+          </button>
+        </li>
+        <li>
+          <button type="button" class="project-gallery__item"
+                  data-lightbox-src="/images/projects/carbon-trading/carbon-trading4.png"
+                  data-lightbox-alt="Carbon Trading platform — AI-enabled experience translating complex climate systems into a clear, navigable view.">
+            <img src="/images/projects/carbon-trading/carbon-trading4.png" alt="Carbon Trading platform — AI-enabled experience translating complex climate systems into a clear, navigable view." class="project-gallery__img" loading="lazy">
+          </button>
+        </li>
+      </ul>
     </section>
 
   </main>
+
+  <app-image-lightbox></app-image-lightbox>
 
   <app-site-footer></app-site-footer>
 

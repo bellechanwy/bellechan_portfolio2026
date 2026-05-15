@@ -31,3 +31,5 @@
 @import './organisms/cta-band.css';
 @import './organisms/project-hero.css';
 @import './organisms/project-detail.css';
+@import './organisms/project-gallery.css';
+@import './organisms/image-lightbox.css';

@@ -18,6 +18,7 @@ import { CONFIG } from './config.js';
 import '../web-components/site-nav.js';
 import '../web-components/site-footer.js';
 import '../web-components/cta-band.js';
+import '../web-components/image-lightbox.js';
 
 const init = () => {
   if (CONFIG.DEV_MODE) {

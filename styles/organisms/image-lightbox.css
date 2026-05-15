@@ -1,0 +1,94 @@
+/*
+ * Module: image-lightbox.css
+ * Type: Organism — full-screen image viewer.
+ * Purpose: Modal that pops up over any page to show a single image at
+ *          its full available size. Driven by the <app-image-lightbox>
+ *          web component, which uses the native <dialog> element for
+ *          accessibility (focus trap, ESC to close, backdrop).
+ *
+ * Depends on:
+ *   - tokens-semantic.css
+ *
+ * Used by: any page that mounts <app-image-lightbox>
+ * Side effects: None
+ */
+
+.image-lightbox {
+  padding: 0;
+  margin: auto;
+  border: none;
+  background: transparent;
+  max-width: min(96vw, 1600px);
+  max-height: 96vh;
+  overflow: visible;
+  color: var(--text-primary);
+}
+
+.image-lightbox::backdrop {
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.image-lightbox__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-md);
+}
+
+.image-lightbox__img {
+  display: block;
+  max-width: calc(96vw - var(--space-lg));
+  max-height: calc(96vh - var(--space-xxl));
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.image-lightbox__close {
+  position: absolute;
+  top: calc(var(--space-md) * -1 - var(--space-sm));
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.image-lightbox__close:hover,
+.image-lightbox__close:focus-visible {
+  transform: scale(1.05);
+  background-color: var(--bg-page);
+}
+
+.image-lightbox__close:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .image-lightbox__close {
+    top: calc(var(--space-sm) * -1 - 2.25rem);
+  }
+}
