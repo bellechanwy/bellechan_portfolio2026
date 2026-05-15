@@ -30,7 +30,6 @@
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
-  min-height: 360px;
 }
 
 .project-hero--pink     { background-color: var(--accent-pink);     color: var(--text-inverse); }
@@ -69,6 +68,13 @@
   line-height: 1.5;
   color: inherit;
   opacity: 0.9;
+}
+
+.project-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
 }
 
 .project-meta {
