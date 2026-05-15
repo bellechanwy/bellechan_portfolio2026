@@ -26,6 +26,7 @@
   overflow: hidden;
   isolation: isolate;
   min-height: 360px;
+  height: 100%;
   transition: transform var(--transition-base);
 }
 

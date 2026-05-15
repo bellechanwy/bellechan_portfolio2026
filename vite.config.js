@@ -11,10 +11,9 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
-          lumen: resolve(__dirname, 'projects/lumen.html'),
-          tiller: resolve(__dirname, 'projects/tiller.html'),
-          mosaic: resolve(__dirname, 'projects/mosaic.html'),
-          pebble: resolve(__dirname, 'projects/pebble.html')
+          'carbon-trading': resolve(__dirname, 'projects/carbon-trading.html'),
+          'records-management': resolve(__dirname, 'projects/records-management.html'),
+          timesheet: resolve(__dirname, 'projects/timesheet.html')
         }
       }
     }
