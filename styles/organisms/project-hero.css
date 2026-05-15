@@ -1,10 +1,9 @@
 /*
  * Module: project-hero.css
  * Type: Organism — layout for the case-study hero block on project pages.
- * Purpose: Big rounded saturated band carrying project name, one-liner,
- *          and the project metadata grid (role, year, client, scope).
- *          Cycles a brand colour per project (see DESIGN.md "don't repeat
- *          the same brand-color card twice in a row" — each project owns one).
+ * Purpose: Case-study hero — frosted glass band plus metadata panel.
+ *          Legacy colour modifiers are neutralised; all heroes share the
+ *          same uncoloured glass treatment.
  *
  * Depends on:
  *   - tokens-semantic.css
@@ -30,13 +29,25 @@
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
+
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(165%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(165%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  color: var(--text-primary);
 }
 
-.project-hero--pink     { background-color: var(--accent-pink);     color: var(--text-inverse); }
-.project-hero--teal     { background-color: var(--accent-teal);     color: var(--text-inverse); }
-.project-hero--lavender { background-color: var(--accent-lavender); color: var(--text-primary); }
-.project-hero--peach    { background-color: var(--accent-peach);    color: var(--text-primary); }
-.project-hero--ochre    { background-color: var(--accent-ochre);    color: var(--text-primary); }
+.project-hero--pink,
+.project-hero--teal,
+.project-hero--lavender,
+.project-hero--peach,
+.project-hero--ochre,
+.project-hero--dark {
+  background-color: var(--glass-bg);
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+}
 
 .project-hero__copy {
   display: flex;
@@ -84,8 +95,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+  background: none;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .project-meta__item dt {

@@ -15,9 +15,11 @@
  */
 
 .site-footer {
-  background-color: var(--bg-page);
-  color: var(--text-secondary);
-  margin-top: var(--space-xxl);
+  background: none;
+  background-color: transparent;
+  color: var(--text-primary);
+  margin-top: var(--space-md);
+  padding-bottom: var(--space-sm);
 }
 
 .site-footer__inner {
@@ -41,7 +43,7 @@
   font-weight: 600;
   letter-spacing: var(--tracking-uppercase);
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-primary);
 }
 
 .site-footer__display {
@@ -80,7 +82,7 @@
 .site-footer__col li,
 .site-footer__col a {
   font-size: var(--font-size-body-sm);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .site-footer__col a:hover { color: var(--text-primary); opacity: 1; }
@@ -109,33 +111,36 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--space-lg) var(--space-lg);
-  border-top: 1px solid var(--border-soft);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-md);
   font-size: var(--font-size-caption);
-  color: var(--text-muted);
+  color: var(--text-primary);
+  background: none;
+  background-color: transparent;
 }
 
 .site-footer__linkedin {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xxs);
-  padding: var(--space-xxs) var(--space-sm);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  font-size: var(--font-size-caption);
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: inherit;
   font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  background: none;
+  background-color: transparent;
+  transition: opacity var(--transition-fast);
 }
 
 .site-footer__linkedin:hover {
-  background-color: var(--bg-card);
-  border-color: var(--text-primary);
-  opacity: 1;
+  background: none;
+  background-color: transparent;
+  opacity: 0.7;
 }
 
 @media (max-width: 900px) {

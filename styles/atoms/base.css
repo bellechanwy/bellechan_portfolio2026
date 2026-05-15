@@ -12,7 +12,12 @@
  */
 
 html {
-  background-color: var(--bg-page);
+  min-height: 100%;
+  background-color: #f5ede3;
+  background-image: var(--page-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
@@ -20,7 +25,8 @@ body {
   font-size: var(--font-size-body-md);
   line-height: 1.55;
   color: var(--text-primary);
-  background-color: var(--bg-page);
+  background-color: transparent;
+  min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

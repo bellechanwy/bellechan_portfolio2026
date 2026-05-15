@@ -16,9 +16,9 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background-color: var(--bg-page);
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(8px);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(165%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(165%);
 }
 
 .site-nav__inner {
@@ -46,10 +46,16 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  /* Gradient hues match public/images/img/hero.svg linearGradient stops */
   background:
-    radial-gradient(circle at 30% 30%, var(--accent-peach) 0%, var(--accent-coral) 60%, var(--accent-pink) 100%);
-  box-shadow: inset -3px -4px 8px rgba(10, 10, 10, 0.2),
-              inset 3px 4px 8px rgba(255, 255, 255, 0.35);
+    radial-gradient(
+      circle at 30% 30%,
+      #b9f9ff 0%,
+      #84c3ff 50%,
+      #1d61ff 100%
+    );
+  box-shadow: inset -3px -4px 8px rgba(13, 40, 120, 0.25),
+              inset 3px 4px 8px rgba(255, 255, 255, 0.45);
 }
 
 .site-nav__brand-name {
@@ -106,8 +112,10 @@
   width: 44px;
   height: 44px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--bg-page);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -139,8 +147,9 @@
     flex-direction: column;
     align-items: stretch;
     gap: var(--space-md);
-    background-color: var(--bg-page);
-    border-bottom: 1px solid var(--border-soft);
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(165%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(165%);
     padding: var(--space-lg) var(--space-md) var(--space-xl);
     transform: translateY(-8px);
     opacity: 0;

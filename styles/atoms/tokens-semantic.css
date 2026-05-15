@@ -32,7 +32,7 @@
   --bg-elevated: var(--color-white);
   --bg-card: var(--color-surface-card);
   --bg-card-strong: var(--color-surface-strong);
-  --bg-dark: var(--color-surface-dark);
+  --bg-dark: var(--color-body);
 
   /* Borders */
   --border: var(--color-hairline);
@@ -41,6 +41,23 @@
 
   /* Shadows */
   --shadow: var(--shadow-md);
+
+  /* Page atmosphere — beige → blue gradient behind all content */
+  --page-gradient: linear-gradient(
+    160deg,
+    #f5ede3 0%,
+    #ebe2d6 22%,
+    #d5e3ed 48%,
+    #9eb8d4 74%,
+    #6a8eb0 100%
+  );
+
+  /* Neutral frosted glass (uncoloured panels) */
+  --glass-bg: rgba(255, 255, 255, 0.22);
+  --glass-border: rgba(255, 255, 255, 0.48);
+  --glass-border-edge: rgba(10, 10, 10, 0.1);
+  --glass-blur: 18px;
+  --glass-shadow: 0 8px 32px rgba(10, 10, 10, 0.08);
 }
 
 /* ========================

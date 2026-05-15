@@ -17,7 +17,11 @@
   max-width: 1280px;
   margin: var(--space-section) auto 0;
   padding: 80px;
-  background-color: var(--bg-surface);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(165%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(165%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   border-radius: var(--radius-xl);
   display: grid;
   grid-template-columns: 1.4fr 1fr;

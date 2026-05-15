@@ -13,3 +13,7 @@
  * .prose img { border-radius: var(--radius-md); }
  * — When Tailwind's prose plugin applies defaults you can't override via config.
  */
+
+body.bg-page {
+  background-color: transparent !important;
+}
